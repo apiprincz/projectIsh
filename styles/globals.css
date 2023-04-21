@@ -1,0 +1,120 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Readex+Pro:wght@200;300;400;500;700&family=Yatra+One&display=swap');
+
+
+
+
+
+
+*, button {
+  font-family: 'Chakra Petch', sans-serif  !important;
+color: white;
+
+}
+
+
+html,
+body, .header{
+  max-width: 100vw;
+
+  background-color: black !important;
+ 
+}
+.css-hyum1k-MuiToolbar-root {
+  background-color: orange !important;
+}
+h1 {
+  font-size: 50px;
+}
+h4, p {
+  color: gray;
+}
+button.btn-header {
+  background-color: white !important;
+  color: orange !important;
+}
+svg {
+  fill: black !important;
+}
+svg.circle {
+  fill: white !important;
+}
+svg.footerSvg{
+  fill: white !important;
+}
+label span {
+  color: black !important
+}
+.mobileBtn{
+  display: none;
+}
+.AiShiba {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  width: 40%;
+    }
+@media only screen and (max-width:725px){
+  .AiShiba {
+position: absolute;
+right: 0;
+bottom: 1%;
+width: 50%;
+  }
+  .menuLg {
+    display: none !important;
+  }
+  .mobileBtn {
+    display: block;
+  }
+}
+.Airdrop {
+  background: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  /* margin-top: 200px; */
+  /* width: 50%; */
+}
+.page-section-2 {
+  margin-top: 200px;
+}
+.airdropTitle {
+  color: black;
+}
+h4 {
+  margin: 10px 0px;
+}
+a {
+  cursor: pointer;
+}
+.roadmapContainer {
+border-left: 4px solid white;
+}
+.roadmapContent {
+  background: transparent;
+  border: 2px solid rgb(216, 96, 30);
+  padding: 10px;
+}
+.perksContent {
+  background: rgb(216, 96, 30);
+  border-right: 1px solid white;
+}
+.perksText{
+  color: white;
+}
+a {
+  color: black  !important;
+}
+.menu a {
+  color: white  !important;
+}
+@media only screen and (max-width: 512px ){
+  .Banner {
+    padding: 10px !important;
+  }
+}
+
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+  background: none !important;
+}
