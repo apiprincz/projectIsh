@@ -3,7 +3,7 @@ const provider = new Web3.providers.HttpProvider('https://arb1.arbitrum.io/rpc')
 const web3 = new Web3(provider);
 
 const contractAddress = '0x123...'; // Replace with the actual contract address
-const contractAbi = [{...}]; // Replace with the actual contract ABI
+const contractAbi = [{}]; // Replace with the actual contract ABI
 
 const contract = new web3.eth.Contract(contractAbi, contractAddress);
 

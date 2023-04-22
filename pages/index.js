@@ -53,17 +53,15 @@ import Tokenomics from "../components/Tokenomics";
 import Socials from "../components/Socials";
 import Header from "../components/Header";
 import Faq from "../components/Faq";
-import { testHolder } from "./testholder";
-// import Listings from "@/components/Listings";
+import Image from "next/image";
+
+
 
 
 const Home = () => {
-  const one = BigNumber.from(1);
-  const zero = BigNumber.from(0);
+
   const [walletConnected, setWalletConnected] = useState(false);
 
-  // const [merkleRoot, setMerkleRoot] = useState(rootHash)
-  // const [loading, setLoading] = useState(false);
   const [mintedForFree, setMintedForFree] = useState(false);
   const [freeMinted, setFreeMinted] = useState(0);
   const [userAddress, setUserAddress] = useState("");
@@ -271,38 +269,8 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    if (walletConnected) {
-      if (userAddress === "0x11EF4c095859B1F9360538dE3d509d270A211c9a") {
-        setBtn(true);
-      } else {
-        setBtn(false);
-      }
-    }
-  }, [walletConnected]);
 
-  const handleNFTHolders = async() => {
-        try {
-          const signer = await getProviderOrSigner(true);
-      const aiShibaContract = new Contract(
-        AISHIBA_CONTRACT_ADDRESS,
-        AISHIBA_CONTRACT_ABI,
-        signer
-      );
 
-      for (let i = 0; i < testHolder.length; i++) {
-        
-      const NFTOwned = await aiShibaContract.getNftOwned(testHolder[i])
-
-      console.log("NFTOwned",testHolder[i], NFTOwned.toNumber() )
-        NFTOwnedArray.push(NFTOwned.toNumber())
-        
-      }
-    
-    } catch (error) {
-      console.error(error);
-    }
-  }
 
   return (
     <Grid>
@@ -518,7 +486,7 @@ const Home = () => {
               )}
             </Grid>
             <Grid sm={6} xs={12}>
-              <img className="AiShiba" src="./aishiba.png" alt="AiShiba" />
+              <Image className="AiShiba" src="./aishiba.png" alt="AiShiba" />
             </Grid>
           </Grid>
         </Grid>
@@ -550,7 +518,7 @@ const Home = () => {
                 href="https://www.coingecko.com/en/coins/aishiba"
                 target="_blank"
               >
-                <img
+                <Image
                   style={{ width: "30px", height: "30px" }}
                   src={Coingecko}
                   alt="Coingecko"
@@ -565,7 +533,7 @@ const Home = () => {
                 href="https://coinmarketcap.com/currencies/aishiba/"
                 target="_blank"
               >
-                <img
+                <Image
                   style={{ width: "30px", height: "30px" }}
                   src={Coinmarketcap}
                   alt="Coinmarketcap"
@@ -580,7 +548,7 @@ const Home = () => {
                 href="https://dexscreener.com/arbitrum/0xbb1554b79d49327f6f000fb8057a972bfee4afca"
                 target="_blank"
               >
-                <img
+                <Image
                   style={{ width: "30px", height: "30px" }}
                   src={DEXTools}
                   alt="DEXTools"

@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import Image from "next/image";
 // import AiShiba from  "aishiba.png"
 
 const Banner = () => {
@@ -28,7 +29,7 @@ const Banner = () => {
           </Grid>
         </Grid>
         <Grid sm={6} xs={12}>
-            <img className='AiShiba' src="./aishiba.png" alt='AiShiba'/>
+            <Image className='AiShiba' src="./aishiba.png" alt='AiShiba'/>
         </Grid>
       </Grid>
     </Grid>
